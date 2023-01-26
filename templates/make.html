@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quizz</title>
+    <link rel="stylesheet" href="static/assets/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/styles.css">
+  </head>
+  <body>
+        {% if m %}
+        <div id="message">{{ m }}<br>Share code: {{ code }} <br>Master Code (For Checking): {{ master }}</div>
+        {% endif %}
+      <h1 style="text-align:center">Lets make a quiz</h1>
+      <h2>Here are the rules:</h2>
+      <section style="color: whitesmoke">
+          1. Mark start of a question with "<b>***</b>" (quotation marks not included)<br>
+          2. Label each question as <b>1) 2) ... </b> <br>
+          3. Label each option as <b>a) b) ....</b><br>
+          4. Mark the correct option by entering "<b>##</b>" at the end of that option.<br>
+          <br>
+          So a sample would be:<br>
+          <p id="sample">
+              ***<br>
+              1) How many alphabets are there ?<br>
+              a) 24 <br>
+              b) 29 <br>
+              c) 26 ## <br>
+              d) 30 <br>
+              ***<br>
+              2) What is the radius of Earth ?<br>
+              .....<br>
+              .....<br>
+          </p>
+      </section>
+      <form id="question_submit" method="post">
+          <textarea id="questions" name="questions" rows='15' autofocus></textarea><br>
+          <button id="sub_que" type="submit">Submit</button>
+      </form>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <a href={{ url_for('home') }}><button class="btn btn-primary">Return to Home</button></a>
+      </div>
+  </body>

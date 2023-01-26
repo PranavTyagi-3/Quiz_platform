@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0px;
+    padding:0px;
+    background-color: whitesmoke;
+}
+.home_options{
+    width: 30%;
+    height: 40vh;
+    background-color: rgb(54, 157, 247);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: x-large;
+    float: left;
+    border-radius: 8px;
+    margin-right:10%;
+    margin-left:10%;
+    margin-top: 30vh;
+    
+}
+.home_options:hover{
+    background-color: rgb(3, 18, 151);
+    color: white;
+    cursor: pointer;
+}
+form{
+    position: relative;
+    width: 100%;
+    height:50vh;
+    background-color: whitesmoke;
+    border-radius: 7px;
+    margin-top: 25vh;
+    font-size: 2rem;
+}
+section{
+    position: relative;
+    background-color: rgb(37, 113, 255);
+    height: 80%;
+    width: 80%;
+    top:10%;
+    left:10%;
+    padding:10px;
+    border-radius: 7px;
+}
+input{
+    border-radius: 5px;
+    border: 0;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+#submit{
+    position: absolute;
+    width: 20%;
+    left:40%;
+    top:40%;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    border:0;
+    color:whitesmoke;
+    background-color: crimson;
+    padding: 10px;
+}
+#submit:hover{
+    cursor: pointer;
+}
+
+#sample{
+    background-color: whitesmoke;
+    border-radius: 4px;
+    padding:5px;
+    color:black
+}
+
+#question_submit{
+    margin-top: 20px;
+}
+#question_submit{
+    height: auto;
+}
+textarea{
+    font-family: 'Times New Roman', Times, serif;
+    width:90%;
+    margin:5%;
+    resize: none;
+    font-size: 1rem;
+    padding: 5px;
+
+}
+
+#sub_que{
+    width: 20%;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    border:0;
+    color:whitesmoke;
+    background-color: crimson;
+    padding: 10px;
+    margin-left:40%;
+    margin-bottom:10px;
+}
+
+#message{
+    background-color: rgb(207, 67, 67);
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    margin-top:35vh;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    padding:20px;
+    padding-left: 50px;
+    padding-right:50px;
+}

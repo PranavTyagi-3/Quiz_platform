@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quizz</title>
+    <link rel="stylesheet" href="/static/assets/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/styles_t.css">
+  </head>
+<body>
+    {% if message=='not found' %}
+    <div id="message">
+        Not Found<br>
+        Wrong Code
+    </div>
+    {% else %}
+    <div class="row">
+        <form method="post">
+        <div class="col text-center bt">
+        Name: 
+        <input type="text" name="s_name"></input>
+        </div>
+        {% for i in mydict.keys() %}
+            <div class="col">
+                <div class="box form-group">
+                    <p class="i_message">{{ i }}</p>
+                    {% for j in mydict[i]%}
+                    <input type="radio" id="{{ j }}"  value="{{ j }}" name="{{ mydict[i] }}"/> {{ j }}    
+                    <br>
+                    {% endfor %}    
+                </div>
+            </div>
+        {% endfor %}
+        <div class="col text-center bt">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        </form>
+    </div>
+    {% endif %}
+    <div style="text-align: center; margin-top: 20px;">
+        <a href={{ url_for('home') }}><button class="btn btn-primary">Return to Home</button></a>
+    </div>
+</body>
+</html>
